@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Number Guessing Game V1</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="game_logo">game_logo</string>
+    <string name="press">Press to Guess</string>
+    <string name="number_enter">Enter A Number</string>
+
+</resources>

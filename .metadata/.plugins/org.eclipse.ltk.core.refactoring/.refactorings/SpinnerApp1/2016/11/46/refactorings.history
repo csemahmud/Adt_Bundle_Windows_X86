@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Remove Container" description="Remove Container" file="/SpinnerApp1/res/layout/activity_main.xml" flags="6" id="com.android.ide.eclipse.adt.refactoring.unwrap" proj="/SpinnerApp1" sel-end="1216" sel-start="496" stamp="1478405865286"/>
+</session>

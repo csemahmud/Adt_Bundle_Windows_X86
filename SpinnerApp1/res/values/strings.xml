@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SpinnerApp1</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="girlfriend_prompt">Choose Your Girl-Friend</string>
+    <string name="show">Show</string>
+    <string name="select_gf">Select Your Girl-Friend :</string>
+    <string name="select_car">Select Your Car :</string>
+
+    <string-array name="girlfriend_arrays">
+        <item>Alia Bhatt</item>
+        <item>Shraddha Kapoor</item>
+        <item>Katrina Kaif</item>
+        <item>Iliena DCruz</item>
+        <item>Amy Jackson</item>
+        <item>Deepika Padukone</item>
+        <item>Anushka Sharma</item>
+        <item>Samantha</item>
+    </string-array>
+
+</resources>

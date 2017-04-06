@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;NumberGuessingGameV1/res/raw/Summer - Cheer.mp3&apos; to &apos;cheer.mp3&apos;" description="Rename resource &apos;Summer - Cheer.mp3&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="res/raw/Summer - Cheer.mp3" name="cheer.mp3" stamp="1480219555432" updateReferences="true"/>
+</session>

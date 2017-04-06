@@ -1,0 +1,100 @@
+package com.mahmud.numberguessinggamev1;
+
+import java.util.Random;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+/**
+ * @author Mahmudul Hasan Khan CSE
+ *
+ */
+public class MainActivity extends Activity {
+	
+	private EditText numberEditText;
+	private TextView messageTextView, randTextView, pointsTextView, stepsTextView;
+	private Button pressButton;
+	private long points, steps;
+	boolean reset;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		numberEditText = (EditText) findViewById(R.id.numberEditText);
+		messageTextView = (TextView) findViewById(R.id.messageTextView);
+		randTextView = (TextView) findViewById(R.id.randTextView);
+		pointsTextView = (TextView) findViewById(R.id.pointsTextView);
+		stepsTextView = (TextView) findViewById(R.id.stepsTextView);
+		pressButton = (Button) findViewById(R.id.pressButton);
+		
+		points = 100;
+		steps = 0;
+		reset = false;
+		
+		pressButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View view) {
+				// TODO Auto-generated method stub
+				
+				if(reset){
+					pressButton.setText(R.string.press);
+					points = 100;
+					steps = 0;
+					reset = false;
+				}
+				
+				try{
+					long userNum = Long.parseLong(numberEditText.getText().toString());
+					if((userNum > 0)&&(userNum < 6)) {
+						long randNum = new Random().nextInt(5) + 1;
+						steps++;
+						if(userNum == randNum){
+							points++;
+							messageTextView.setText("You Got It Right!");
+						} else {
+							points--;
+							if(points > -1) {
+								messageTextView.setText("Not Quite, Guess Again!");
+							} else {
+								messageTextView.setText("Game Over !!!");
+								pressButton.setText("Play Again");
+								reset = true;
+							}
+						}
+						
+						randTextView.setText(Long.toString(randNum));
+						pointsTextView.setText("Points = " + points);
+						stepsTextView.setText("Steps = " + steps);
+						numberEditText.setText("");
+						
+					} else {
+						messageTextView.setText("Number Between 1 to 5");
+					}
+				} catch (Exception ex) {
+					// TODO: handle exception
+					
+					Log.e("Exception", ex.getMessage());
+				}
+				
+			}
+		});
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+}
